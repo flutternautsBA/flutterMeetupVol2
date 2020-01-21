@@ -11,10 +11,28 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Colors.deepPurple,
         appBar: AppBar(
-          title: Text('Flutter Meetup'),
+          backgroundColor: Colors.deepPurple.shade900,
+          title: Text('My CV'),
         ),
-        body: Container(),
+        body: Container(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'My Name',
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                'My Position',
+                style: TextStyle(color: Colors.white),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
