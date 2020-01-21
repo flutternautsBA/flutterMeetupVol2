@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,7 +37,9 @@ class MyApp extends StatelessWidget {
               ),
               Text(
                 'My Position',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.pacifico(
+                  textStyle: TextStyle(color: Colors.white),
+                ),
               ),
             ],
           ),
