@@ -22,9 +22,17 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              CircleAvatar(
+                backgroundImage: AssetImage('images/logo.jpg'),
+                radius: 50.0,
+              ),
               Text(
                 'My Name',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Comforta',
+                  fontSize: 30.0,
+                ),
               ),
               Text(
                 'My Position',
