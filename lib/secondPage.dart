@@ -14,6 +14,14 @@ class SecondPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             AnimationWidget(),
+            SizedBox(
+              height: 50.0,
+            ),
+            Hero(
+              tag: 'Flutter',
+              child:
+                  CircleAvatar(backgroundImage: AssetImage('images/logo.jpg')),
+            ),
           ],
         ),
       ),

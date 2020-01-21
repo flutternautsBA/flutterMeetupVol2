@@ -37,9 +37,12 @@ class TopPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        CircleAvatar(
-          backgroundImage: AssetImage('images/logo.jpg'),
-          radius: 50.0,
+        Hero(
+          tag: 'Flutter',
+          child: CircleAvatar(
+            backgroundImage: AssetImage('images/logo.jpg'),
+            radius: 50.0,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.all(20.0),
