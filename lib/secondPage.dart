@@ -9,8 +9,47 @@ class SecondPage extends StatelessWidget {
         title: Text('Second Page'),
       ),
       body: Center(
-        child: Text('Welcome to Second Page'),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            AnimationWidget(),
+          ],
+        ),
       ),
+    );
+  }
+}
+
+class AnimationWidget extends StatefulWidget {
+  @override
+  _AnimationWidgetState createState() => _AnimationWidgetState();
+}
+
+class _AnimationWidgetState extends State<AnimationWidget> {
+  double width = 25.0;
+  double height = 25.0;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        AnimatedContainer(
+          width: width,
+          height: height,
+          color: Colors.deepPurple,
+          duration: Duration(seconds: 1),
+          child: Container(),
+        ),
+        RaisedButton(
+          child: Text('Resize my container'),
+          onPressed: () {
+            setState(() {
+              width += 30;
+              height += 30;
+            });
+          },
+        )
+      ],
     );
   }
 }
