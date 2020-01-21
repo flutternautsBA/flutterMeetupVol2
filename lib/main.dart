@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,20 +20,23 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           width: double.infinity,
+          margin: EdgeInsets.all(30.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 backgroundImage: AssetImage('images/logo.jpg'),
                 radius: 50.0,
               ),
-              Text(
-                'My Name',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Comforta',
-                  fontSize: 30.0,
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  'My Name',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Comforta',
+                    fontSize: 30.0,
+                  ),
                 ),
               ),
               Text(
@@ -41,6 +45,30 @@ class MyApp extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.white),
                 ),
               ),
+              SizedBox(
+                height: 100.0,
+              ),
+              Divider(
+                color: Colors.white,
+                height: 10.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Chip(
+                      label: Text('I\'m chip'),
+                    ),
+                    Chip(
+                      label: Text('I\'m chip'),
+                    ),
+                    Chip(
+                      label: Text('I\'m chip'),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
